@@ -18,11 +18,13 @@ const schema = {
     email: {
       description: colors.green("Informe seu email?"),
       message: "Preencha um email válido",
+      pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
       required: true,
     },
     cpf: {
       description: colors.yellow("Informe seu CPF?"),
       message: "Preencha um CPF válido",
+      pattern: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/,
       required: true,
     },
   },
